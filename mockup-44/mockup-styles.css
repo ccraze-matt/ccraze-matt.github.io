@@ -1,0 +1,346 @@
+/*
+ * Begin styles that are intended to replace current
+ * costumecraze.com styles. These are not new selectors.
+ * These styles change existing elements on the website.
+ */
+/* add 'Carlito' to the font stack.
+ * I like carlito well enough, but it's character height to
+ * line height ratio is sufficiently different from verdana's
+ * that our current typography settings, such as line-heights,
+ * clash when carlito is used as the display font. So, we do
+ * need to find another open-source alternative which has
+ * display ratios more similar to that of verdana, so long as
+ * verdana continues to be our preferred font.
+ *
+ * maybe DejaVu Sans is a good alternative.
+ *
+ * killed carlito for now. switching to dejavu sans because
+ * its ratios are more similar to verdana.
+ *
+ * also kill any letter-spacing settings. all of these fonts
+ * look odd with the letters crunched up close.
+ */
+*,
+#left_nav .cat_list a {
+  font-family: Verdana, 'DejaVu Sans', Tahoma, Geneva, Arial, Helvetica, sans-serif;
+  /*
+  font-family: 'DejaVu Sans'; // nice. possibly boring, but very easy to read
+  font-family: 'PT Sans'; // nice, but possibly a bit too thin for some contexts
+  font-family: Verdana;
+  font-family: 'Cantarell'; // nice look, but small characters for tall-ish line height
+  font-family: 'Carlito'; // very nice, but short compared to line-height.
+  font-family: 'Source Han Sans CN'; // very nice when thin at font-weight: 100
+  font-family: 'Source Han Sans TW'; // very nice when thin at font-weight: 100
+  font-family: 'Waree'; // nice look, but tall line-height
+  font-family: Geneva;
+  font-family: Arial;
+  font-family: Helvetica;
+  font-family: sans-serif;
+  */
+  letter-spacing: 0; }
+
+/* Give the left-nav section titles a darker background color.
+ * I think this makes the white text much easier to read.
+ */
+#left_nav .cat_title > li {
+  background-color: #6a9a2a; }
+
+/* The top title in the left nav is the one place I see that
+ * looks better with the tighter letter spacing. We have to
+ * re-apply the style here to undo the global chnage we made
+ * above with the `*` selector.
+ */
+#left_nav .cat_name > span {
+  letter-spacing: -1px; }
+
+/*
+ * Begin non-semantic helper classes
+ */
+.nowrap {
+  white-space: nowrap; }
+
+.bu {
+  font-weight: bold;
+  text-decoration: underline; }
+
+.inline-center {
+  display: inline-block;
+  text-align: center; }
+
+/*
+ * i don't think i'm using this in mockups anymore.
+ * /
+.category_name {
+
+  +div {
+    margin-top: -.67em;
+    margin-bottom: 1em;
+  }
+
+  h1 {
+    margin-top: .33em;
+    margin-bottom: .67em;
+    letter-spacing: 0;
+  }
+}
+/**/
+/*
+ * i don't think i'm using this in mockups anymore.
+ * /
+fieldset#search_fields {
+  box-sizing: border-box;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+/**/
+.category-header {
+  font-size: 80%;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  position: relative;
+  width: 100%; }
+  .category-header .category-header-line1 {
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1em;
+    background-color: #bef67e;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    /*
+    ** These .basic-search styles are specific to the keyword
+    ** input that's above the drop-down search dialog.
+    */ }
+    .category-header .category-header-line1 .category-h1 {
+      display: table-cell;
+      padding: 1em 0 .7em; }
+      .category-header .category-header-line1 .category-h1 h1 {
+        display: inline-block;
+        font-weight: 600;
+        padding: 0;
+        line-height: 100%;
+        font-size: 180%;
+        margin: 0 .3em 0 0; }
+      .category-header .category-header-line1 .category-h1 span.results-count {
+        font-size: 120%;
+        vertical-align: 10%;
+        white-space: nowrap; }
+    .category-header .category-header-line1 .basic-search {
+      display: table-cell;
+      background-color: #6a9a2a;
+      padding: .3em .5em 0 .6em;
+      border-bottom: 1px #bef67e solid;
+      border-top-right-radius: 5px;
+      vertical-align: bottom;
+      min-width: 20em; }
+  .category-header .category-header-line3 {
+    font-size: 100%;
+    background-color: #6a9a2a;
+    margin: 0;
+    padding: .5em 1em;
+    box-sizing: border-box;
+    width: 100%; }
+    .category-header .category-header-line3 h2 {
+      color: #203;
+      display: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      line-height: 1.1em; }
+    .category-header .category-header-line3 .category-siblings {
+      vertical-align: baseline;
+      font-size: 1.1em;
+      line-height: 1.1em; }
+      .category-header .category-header-line3 .category-siblings .sibling {
+        display: inline-block;
+        vertical-align: baseline;
+        white-space: nowrap; }
+        .category-header .category-header-line3 .category-siblings .sibling .divider {
+          color: #fff; }
+        .category-header .category-header-line3 .category-siblings .sibling a {
+          color: #fff; }
+
+.category-header-search {
+  display: none;
+  padding: .5em 1em;
+  background-color: #efffd6;
+  border-left: 5px #bef67e solid;
+  border-right: 5px #6a9a2a solid; }
+
+.top-nav {
+  width: 998px;
+  position: relative;
+  font-size: 100%;
+  line-height: 100%; }
+  .top-nav .nav-image {
+    position: absolute;
+    bottom: 35px;
+    overflow: hidden;
+    height: 0;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s, border 0.5s;
+    z-index: 1;
+    border-width: 2px 2px 0;
+    border-color: #8660ad;
+    border-style: solid solid none;
+    width: 998px;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    box-sizing: border-box; }
+  .top-nav .nav-text {
+    position: relative;
+    background-color: #8660ad;
+    height: 35px;
+    display: table;
+    width: 998px;
+    overflow: hidden;
+    z-index: 2;
+    font-size: 90%;
+    line-height: 110%;
+    padding: .2em 0; }
+    .top-nav .nav-text .w82 {
+      width: 82px; }
+    .top-nav .nav-text .w85 {
+      width: 85px; }
+    .top-nav .nav-text .w87 {
+      width: 87px; }
+    .top-nav .nav-text .w88 {
+      width: 88px; }
+    .top-nav .nav-text .w90 {
+      width: 90px; }
+    .top-nav .nav-text .w92 {
+      width: 92px; }
+    .top-nav .nav-text .w97 {
+      width: 97px; }
+    .top-nav .nav-text a,
+    .top-nav .nav-text span.nav-divider {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      color: #fff; }
+    .top-nav .nav-text span.nav-divider img {
+      opacity: 0.2;
+      width: 1px;
+      height: 35px; }
+
+#topside_logo {
+  position: relative;
+  width: 335px;
+  height: 70px; }
+  #topside_logo a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: top .5s; }
+
+/*
+** Begin styles common to both .basic-search components
+*/
+.basic-search .search-keywords {
+  margin-top: .3em;
+  margin-bottom: .3em;
+  white-space: nowrap;
+  width: 100%;
+  display: table; }
+  .basic-search .search-keywords .search-input-keywords {
+    display: table-cell;
+    box-sizing: border-box;
+    height: 34px;
+    width: 100%;
+    padding: 3px .5em;
+    background-image: url("http://img.costumecraze.com/images/search_field_middle.png");
+    border: 0;
+    font-size: 110%; }
+  .basic-search .search-keywords .search-button-go {
+    background-image: url("http://img.costumecraze.com/images/search_field_right_purple.png");
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 34px;
+    display: table-cell; }
+    .basic-search .search-keywords .search-button-go input {
+      width: 45px;
+      height: 31px;
+      background: transparent none repeat scroll 0 center;
+      border: 0 none;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold; }
+
+/*
+** Begin styles for category-search dropdown
+**/
+.category-search {
+  display: table;
+  width: 100%;
+  padding-top: 1px;
+  /*
+  ** These .basic-search styles are unique to
+  ** the category dropdown search dialog.
+  */ }
+  .category-search a {
+    font-size: 120%;
+    font-weight: 560; }
+  .category-search .basic-search {
+    display: none; }
+  .category-search .search-dialog-controls {
+    display: table-cell;
+    vertical-align: middle; }
+  .category-search .advanced-search {
+    display: table-cell; }
+    .category-search .advanced-search .advanced-search-container {
+      display: table;
+      width: 100%; }
+      .category-search .advanced-search .advanced-search-container .row {
+        display: table-row;
+        font-size: 120%; }
+        .category-search .advanced-search .advanced-search-container .row .form-label {
+          display: table-cell;
+          text-align: right;
+          padding: .1em .2em;
+          font-weight: bold;
+          cursor: pointer;
+          white-space: nowrap; }
+        .category-search .advanced-search .advanced-search-container .row .form-field {
+          display: table-cell;
+          text-align: left;
+          padding: .1em .2em;
+          cursor: pointer;
+          color: #777; }
+
+/*
+ * These classes are being used in the mockup to show and hide
+ * elements, e.g. the text "Halloween" that we'd push throughout
+ * the site during Halloween-season. I don't intend for this
+ * css or any of the content that contains these classes to
+ * exist beyond this mockup period.
+ *
+ * 'unset' to show content
+ * 'none' to hide
+ */
+/* typically to show or hide the text "Halloween" in several locations */
+.halloween {
+  display: none; }
+
+/* to modify content on category pages for when the category IS NOT
+   filtered with a search. */
+.category-is-not-filtered {
+  display: unset; }
+
+/* to modify content on category pages for when the category IS
+   filtered with a search. */
+.category-is-filtered {
+  display: none; }
+
+/* to use a NON-transparent JPEG as the image above the top-nav
+   text links. */
+.nav-image-jpg {
+  display: unset; }
+
+/* to use a TRANSPARENT PNG as the image above the top-nav
+   text links. */
+.nav-image-png {
+  display: none; }
+
+/*# sourceMappingURL=mockup-styles.css.map */
