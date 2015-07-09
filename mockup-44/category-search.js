@@ -4,14 +4,20 @@ $(function() {
   $searchHide = $('.search-button-hide > a');
   $searchDialog = $('.category-header-search');
   $basicSearch = $('.category-header-line1 .basic-search');
-  hideSearchDialog = function() {
+  hideSearchDialog = function(event) {
+    if (event != null) {
+      event.preventDefault();
+    }
     $searchDialog.hide('fast');
     $searchDialog.data('state', 'hide');
     $basicSearch.css({
       'border-color': '#bef67e'
     });
   };
-  showSearchDialog = function() {
+  showSearchDialog = function(event) {
+    if (event != null) {
+      event.preventDefault();
+    }
     $searchDialog.show('fast');
     $searchDialog.data('state', 'show');
     $basicSearch.css({
@@ -19,11 +25,13 @@ $(function() {
     });
   };
   toggleSearchDialog = function(event) {
-    event.preventDefault();
+    if (event != null) {
+      event.preventDefault();
+    }
     if ($searchDialog.data('state') === 'show') {
-      hideSearchDialog();
+      hideSearchDialog(event);
     } else {
-      showSearchDialog();
+      showSearchDialog(event);
     }
   };
   $searchHide.click(hideSearchDialog);

@@ -114,7 +114,7 @@ fieldset#search_fields {
     */ }
     .category-header .category-header-line1 .category-h1 {
       display: table-cell;
-      padding: 1em 0 .7em; }
+      padding: 1em .5em .7em 0; }
       .category-header .category-header-line1 .category-h1 h1 {
         display: inline-block;
         font-weight: 600;
