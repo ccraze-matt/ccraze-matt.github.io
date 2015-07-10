@@ -1,16 +1,20 @@
 $(function() {
-  var $basicSearch, $searchDialog, $searchHide, $searchToggle, hideSearchDialog, showSearchDialog, toggleSearchDialog;
+  var $dialogBasicSearch, $headerBasicSearch, $searchDialog, $searchHide, $searchToggle, hideSearchDialog, showSearchDialog, toggleSearchDialog;
   $searchToggle = $('.search-toggle');
   $searchHide = $('.search-button-hide > a');
   $searchDialog = $('.category-header-search');
-  $basicSearch = $('.category-header-line1 .basic-search');
+  $headerBasicSearch = $('.category-header-line1 .basic-search');
+  $dialogBasicSearch = $('.category-search .basic-search');
   hideSearchDialog = function(event) {
     if (event != null) {
       event.preventDefault();
     }
     $searchDialog.hide('fast');
     $searchDialog.data('state', 'hide');
-    $basicSearch.css({
+    $headerBasicSearch.css({
+      'border-color': '#bef67e'
+    });
+    $searchToggle.css({
       'border-color': '#bef67e'
     });
   };
@@ -20,22 +24,29 @@ $(function() {
     }
     $searchDialog.show('fast');
     $searchDialog.data('state', 'show');
-    $basicSearch.css({
+    $headerBasicSearch.css({
       'border-color': '#6a9a2a'
     });
+    $searchToggle.css({
+      'border-color': '#6a9a2a'
+    });
+    $dialogBasicSearch.find('input[type="text"]').focus();
   };
   toggleSearchDialog = function(event) {
     if (event != null) {
       event.preventDefault();
     }
+    console.log('toggle search dialog. this: ', this);
     if ($searchDialog.data('state') === 'show') {
       hideSearchDialog(event);
+      $(this).find('a').blur();
     } else {
       showSearchDialog(event);
     }
   };
+  $searchToggle.click(toggleSearchDialog);
   $searchHide.click(hideSearchDialog);
-  $basicSearch.click(showSearchDialog);
+  $headerBasicSearch.click(showSearchDialog);
 
   /*
    * Begin search filters' show/hide button actions

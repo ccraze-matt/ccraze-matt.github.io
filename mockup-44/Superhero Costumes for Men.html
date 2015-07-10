@@ -223,7 +223,7 @@
                 <div class="category-h1">
                   <h1><span class="halloween">Halloween</span> Superhero Costumes for Men</h1><span class="results-count"><span class="category-is-not-filtered">(125 products)</span><span class="category-is-filtered">(found 62 out of 125 products)</span></span>
                 </div>
-                <div class="basic-search">
+                <div class="basic-search hide">
                   <form class="category-search">
                     <div class="search-keywords">
                       <input type="text" name="searchstring" value="" placeholder="Search this category" autocomplete="OFF" class="search-input-keywords"><span class="search-button-go">
@@ -231,21 +231,10 @@
                     </div>
                   </form>
                 </div>
+                <div class="search-toggle"><a href="#">Search this Category</a></div>
               </div>
               <div class="category-header-search">
                 <form class="category-search">
-                  <div class="basic-search">
-                    <div class="search-keywords">
-                      <input type="text" name="searchstring" value="" placeholder="Search this category" autocomplete="OFF" class="search-input-keywords"><span class="search-button-go">
-                        <input type="submit" value="GO"></span>
-                    </div>
-                    <div class="search-button-clear"><a href="?searchstring=">Clear search...</a></div>
-                    <div class="search-button-hide"><a href="#hide-search-dialog">Hide search dialog...</a></div>
-                  </div>
-                  <div class="search-dialog-controls">
-                    <div class="search-button-clear"><a href="?searchstring=">Clear search...</a></div>
-                    <div class="search-button-hide"><a href="#hide-search-dialog">Hide search dialog...</a></div>
-                  </div>
                   <div class="advanced-search">
                     <div class="advanced-search-container">
                       <div class="row">
@@ -273,6 +262,18 @@
                         <div id="displayed_filter_new_for" class="form-field search-newfor">select...</div>
                       </div>
                     </div>
+                  </div>
+                  <div class="basic-search">
+                    <div class="search-keywords">
+                      <input type="text" name="searchstring" value="" placeholder="Search this category" autocomplete="OFF" class="search-input-keywords"><span class="search-button-go">
+                        <input type="submit" value="GO"></span>
+                    </div>
+                    <div class="search-button-hide"><a href="#hide-search-dialog">Hide search dialog...</a></div>
+                    <div class="search-button-clear"><a href="?searchstring=">Clear search...</a></div>
+                  </div>
+                  <div class="search-dialog-controls hide">
+                    <div class="search-button-hide"><a href="#hide-search-dialog">Hide search dialog...</a></div>
+                    <div class="search-button-clear"><a href="?searchstring=">Clear search...</a></div>
                   </div>
                 </form>
                 <form id="frm_search_v3_refine" method="get" name="frm_search_v3_refine" action="">
@@ -733,8 +734,16 @@
                   <div id="match_count"></div>
                 </form>
               </div>
+              <!--
+              to layout the category siblings as a table, with a label on the
+              left, followed by a divider, and then the list of siblings on
+              the right, add the class '.as-table' to .category-header-line3.
+              
+              to display it as a flowing list preceded by a label. add the
+              class '.inline-center'
+              -->
               <div class="category-header-line3 inline-center">
-                <h2>More <span class="halloween">Halloween</span> Superhero Costumes&nbsp;for</h2>
+                <h2><span class="halloween">Halloween</span> Superhero Costumes&nbsp;for</h2><span class="nav-divider-v2"></span>
                 <style>
                   /*
                   ** we have to use a particularly specific selector here
@@ -745,7 +754,7 @@
                   }
                   
                 </style><span class="category-siblings">
-                  <div class="sibling all"><a href="./" title="All Superhero Costumes">All</a><span class="divider">&thinsp;&middot;</span></div>
+                  <div class="sibling all"><a href="./" title="All Superhero Costumes">Everyone</a><span class="divider">&thinsp;&middot;</span></div>
                   <div class="sibling women"><a href="./women" title="Superhero Costumes for Women">Women</a><span class="divider">&thinsp;&middot;</span></div>
                   <div class="sibling men"><a href="./men" title="Superhero Costumes for Men">Men</a><span class="divider">&thinsp;&middot;</span></div>
                   <div class="sibling girls"><a href="./girls" title="Superhero Costumes for Girls">Girls</a><span class="divider">&thinsp;&middot;</span></div>
