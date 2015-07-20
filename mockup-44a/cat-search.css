@@ -1,0 +1,92 @@
+#search_field_outer div {
+  float: left;
+  border: 0px none;
+}
+
+#search_field_label {
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 9px;
+  padding-right: 10px;
+}
+
+#search_field_left {
+  background-image: url("http://img.costumecraze.com/images/search_field_left.png");
+  background-repeat: no-repeat;
+  height: 34px;
+}
+
+#search_field_middle {
+  background-image: url("http://img.costumecraze.com/images/search_field_middle.png");
+  background-repeat: repeat-x;
+  height: 34px;
+  width: 480px;
+}
+
+#search_field_right {
+  background-image: url("http://img.costumecraze.com/images/search_field_right_purple.png");
+  background-repeat: no-repeat;
+  height: 34px;
+  width: 45px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 3px;
+  padding-left: 2px;
+}
+
+#search_field_middle select {
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: relative;
+  top: 7px;
+  left: -120px;
+}
+
+#search_field_middle input {
+  border: 0 none;
+  margin-top: 6px;
+  outline: 0 none;
+  font-size: 14px;
+}
+
+#search_field_select_shell {
+  display: inline-block;
+  background-image: url("http://img.costumecraze.com/images/search_field_select_shell.png");
+  background-position: 0 3px;
+  background-repeat: no-repeat;
+  height: 34px;
+  width: 125px;
+  overflow: hidden;
+}
+
+#search_field_select_txt {
+  display: inline-block;
+  padding-top: 9px;
+  padding-left: 2px;
+}
+
+#search_field_input_shell {
+  display: inline-block;
+  height: 20px;
+  overflow: hidden;
+}
+
+#search_field_submit_btn {
+  background: none repeat scroll 0 center transparent;
+  border: 0 none;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+#search_field_cat_display {
+  letter-spacing: -1px;
+  color: black;
+  font-weight: normal;
+  overflow: hidden;
+}

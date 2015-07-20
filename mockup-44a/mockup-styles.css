@@ -1,0 +1,577 @@
+.nav-divider-v2 {
+  background-image: url("white-pixel.png");
+  background-size: 1px 90%;
+  background-position: center 50%;
+  background-repeat: no-repeat;
+  opacity: .3;
+  width: 1px; }
+
+/*
+ * Begin styles that are intended to replace current
+ * costumecraze.com styles. These are not new selectors.
+ * These styles change existing elements on the website.
+ */
+/* add 'Carlito' to the font stack.
+ * I like carlito well enough, but it's character height to
+ * line height ratio is sufficiently different from verdana's
+ * that our current typography settings, such as line-heights,
+ * clash when carlito is used as the display font. So, we do
+ * need to find another open-source alternative which has
+ * display ratios more similar to that of verdana, so long as
+ * verdana continues to be our preferred font.
+ *
+ * maybe DejaVu Sans is a good alternative.
+ *
+ * killed carlito for now. switching to dejavu sans because
+ * its ratios are more similar to verdana.
+ *
+ * also kill any letter-spacing settings. all of these fonts
+ * look odd with the letters crunched up close.
+ */
+*,
+#left_nav .cat_list a {
+  font-family: Verdana, 'DejaVu Sans', Tahoma, Geneva, Arial, Helvetica, sans-serif;
+  /*
+  font-family: 'DejaVu Sans'; // nice. possibly boring, but very easy to read
+  font-family: 'PT Sans'; // nice, but possibly a bit too thin for some contexts
+  font-family: Verdana;
+  font-family: 'Cantarell'; // nice look, but small characters for tall-ish line height
+  font-family: 'Carlito'; // very nice, but short compared to line-height.
+  font-family: 'Source Han Sans CN'; // very nice when thin at font-weight: 100
+  font-family: 'Source Han Sans TW'; // very nice when thin at font-weight: 100
+  font-family: 'Waree'; // nice look, but tall line-height
+  font-family: Geneva;
+  font-family: Arial;
+  font-family: Helvetica;
+  font-family: sans-serif;
+  */
+  letter-spacing: 0; }
+
+/* Give the left-nav section titles a darker background color.
+ * I think this makes the white text much easier to read.
+ */
+#left_nav .cat_title > li {
+  background-color: #6a9a2a;
+  padding: 9px 10px 5px; }
+
+/* The top title in the left nav is the one place I see that
+ * looks better with the tighter letter spacing. We have to
+ * re-apply the style here to undo the global chnage we made
+ * above with the `*` selector.
+ */
+#left_nav .cat_name {
+  display: none; }
+  #left_nav .cat_name > span {
+    letter-spacing: -1px; }
+
+/*
+** This one is technically a new selector, but it's modifying
+** our use of .grid_19 for category-blocks (to better center it
+** under the category header), so I'm putting it in
+** the ccraze styles override section.
+*/
+.category-blocks .grid_19 {
+  margin: 0; }
+
+#category_blurb {
+  width: unset;
+  padding: 1em 5em; }
+  #category_blurb .blurb_content {
+    margin-left: 0;
+    font-size: 90%;
+    line-height: 140%;
+    margin-top: .5em; }
+
+/*
+** END ccraze override styles
+*/
+.category-header {
+  font-size: 80%;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  position: relative;
+  width: 100%;
+  /*
+  ** agf = age/gender filter
+  ** In this case it refers to the row of agf links at the bottom
+  ** of the category header.
+  */ }
+  .category-header .category-header-line1 {
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 1em;
+    background-color: #bef67e;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    /*
+    ** These .basic-search styles are specific to the keyword
+    ** input that's above the drop-down search dialog.
+    */ }
+    .category-header .category-header-line1 .category-h1 {
+      display: table-cell;
+      padding: 1em .5em .7em 0; }
+      .category-header .category-header-line1 .category-h1 h1 {
+        display: inline-block;
+        font-weight: 600;
+        padding: 0;
+        line-height: 100%;
+        font-size: 180%;
+        margin: 0 .3em 0 0; }
+      .category-header .category-header-line1 .category-h1 span.results-count {
+        font-size: 120%;
+        vertical-align: 10%;
+        white-space: nowrap; }
+    .category-header .category-header-line1 .basic-search {
+      display: table-cell;
+      background-color: #6a9a2a;
+      padding: .3em .5em 0 .6em;
+      border-bottom: 1px #bef67e solid;
+      border-top-right-radius: 5px;
+      vertical-align: bottom;
+      min-width: 20em; }
+    .category-header .category-header-line1 .search-toggle {
+      display: table-cell;
+      font-weight: bold;
+      font-size: 120%;
+      text-align: center;
+      vertical-align: middle;
+      background-color: #6a9a2a;
+      border-top: 2px #bef67e solid;
+      border-bottom: 1px #bef67e solid;
+      border-top-right-radius: 5px;
+      cursor: pointer; }
+      .category-header .category-header-line1 .search-toggle a {
+        color: #fff;
+        display: block;
+        height: 100%;
+        width: 100%; }
+  .category-header .category-header-agf,
+  .category-header .category-header-links {
+    font-size: 100%;
+    background-color: #6a9a2a;
+    margin: 0;
+    padding: .4em 1em;
+    box-sizing: border-box;
+    width: 100%; }
+    .category-header .category-header-agf h2,
+    .category-header .category-header-links h2 {
+      color: #ffff99;
+      display: inline;
+      font-weight: bold;
+      font-size: 1.1em;
+      line-height: 1.2em; }
+      .category-header .category-header-agf h2:after,
+      .category-header .category-header-links h2:after {
+        content: ':'; }
+    .category-header .category-header-agf span.nav-divider-v2,
+    .category-header .category-header-links span.nav-divider-v2 {
+      display: none; }
+    .category-header .category-header-agf .category-siblings,
+    .category-header .category-header-agf .category-friendlies,
+    .category-header .category-header-links .category-siblings,
+    .category-header .category-header-links .category-friendlies {
+      vertical-align: baseline;
+      display: inline;
+      font-size: 1.1em;
+      line-height: 1.2em; }
+      .category-header .category-header-agf .category-siblings .sibling,
+      .category-header .category-header-agf .category-siblings .friendly,
+      .category-header .category-header-agf .category-friendlies .sibling,
+      .category-header .category-header-agf .category-friendlies .friendly,
+      .category-header .category-header-links .category-siblings .sibling,
+      .category-header .category-header-links .category-siblings .friendly,
+      .category-header .category-header-links .category-friendlies .sibling,
+      .category-header .category-header-links .category-friendlies .friendly {
+        display: inline-block;
+        vertical-align: baseline;
+        white-space: nowrap; }
+        .category-header .category-header-agf .category-siblings .sibling .divider,
+        .category-header .category-header-agf .category-siblings .friendly .divider,
+        .category-header .category-header-agf .category-friendlies .sibling .divider,
+        .category-header .category-header-agf .category-friendlies .friendly .divider,
+        .category-header .category-header-links .category-siblings .sibling .divider,
+        .category-header .category-header-links .category-siblings .friendly .divider,
+        .category-header .category-header-links .category-friendlies .sibling .divider,
+        .category-header .category-header-links .category-friendlies .friendly .divider {
+          color: #fff;
+          opacity: .5; }
+        .category-header .category-header-agf .category-siblings .sibling a,
+        .category-header .category-header-agf .category-siblings .friendly a,
+        .category-header .category-header-agf .category-friendlies .sibling a,
+        .category-header .category-header-agf .category-friendlies .friendly a,
+        .category-header .category-header-links .category-siblings .sibling a,
+        .category-header .category-header-links .category-siblings .friendly a,
+        .category-header .category-header-links .category-friendlies .sibling a,
+        .category-header .category-header-links .category-friendlies .friendly a {
+          color: #fff; }
+    .category-header .category-header-agf.as-table,
+    .category-header .category-header-links.as-table {
+      display: table; }
+      .category-header .category-header-agf.as-table h2,
+      .category-header .category-header-links.as-table h2 {
+        display: table-cell;
+        padding: 0;
+        text-align: right; }
+        .category-header .category-header-agf.as-table h2:after,
+        .category-header .category-header-links.as-table h2:after {
+          content: ''; }
+      .category-header .category-header-agf.as-table span.nav-divider-v2,
+      .category-header .category-header-links.as-table span.nav-divider-v2 {
+        display: table-cell;
+        width: 2em; }
+      .category-header .category-header-agf.as-table .category-siblings,
+      .category-header .category-header-agf.as-table .category-friendlies,
+      .category-header .category-header-links.as-table .category-siblings,
+      .category-header .category-header-links.as-table .category-friendlies {
+        vertical-align: baseline;
+        display: table-cell;
+        text-align: left; }
+  .category-header .category-header-bottom-border {
+    height: .4em;
+    background-color: #6a9a2a;
+    margin: 0; }
+
+.category-header-search {
+  display: none;
+  padding: .5em 1em;
+  background-color: #efffd6;
+  border-left: 5px #bef67e solid;
+  border-right: 5px #6a9a2a solid; }
+
+.top-nav {
+  width: 998px;
+  position: relative;
+  font-size: 100%;
+  line-height: 100%; }
+  .top-nav .nav-image {
+    position: absolute;
+    bottom: 35px;
+    overflow: hidden;
+    height: 0;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s, border 0.5s;
+    z-index: 1;
+    border-width: 2px 2px 0;
+    border-color: #8660ad;
+    border-style: solid solid none;
+    width: 998px;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    box-sizing: border-box; }
+  .top-nav .nav-text {
+    position: relative;
+    background-color: #8660ad;
+    height: 35px;
+    display: table;
+    width: 998px;
+    overflow: hidden;
+    z-index: 2;
+    font-size: 90%;
+    line-height: 110%;
+    padding: .2em 0; }
+    .top-nav .nav-text .w82 {
+      width: 82px; }
+    .top-nav .nav-text .w85 {
+      width: 85px; }
+    .top-nav .nav-text .w87 {
+      width: 87px; }
+    .top-nav .nav-text .w88 {
+      width: 88px; }
+    .top-nav .nav-text .w90 {
+      width: 90px; }
+    .top-nav .nav-text .w92 {
+      width: 92px; }
+    .top-nav .nav-text .w97 {
+      width: 97px; }
+    .top-nav .nav-text a,
+    .top-nav .nav-text span.nav-divider {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      color: #fff; }
+    .top-nav .nav-text span.nav-divider img {
+      opacity: 0.2;
+      width: 1px;
+      height: 35px; }
+
+#topside_logo {
+  position: relative;
+  width: 335px;
+  height: 70px; }
+  #topside_logo a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: top .5s; }
+
+/*
+** Begin styles common to both .basic-search components
+*/
+.basic-search {
+  width: 30%; }
+  .basic-search .search-keywords {
+    margin-top: .3em;
+    margin-bottom: .3em;
+    white-space: nowrap;
+    width: 100%;
+    display: table; }
+    .basic-search .search-keywords .search-input-keywords {
+      display: table-cell;
+      box-sizing: border-box;
+      height: 34px;
+      width: 100%;
+      padding: 3px .5em;
+      background-image: url("http://img.costumecraze.com/images/search_field_middle.png");
+      border: 0;
+      font-size: 110%; }
+    .basic-search .search-keywords .search-button-go {
+      background-image: url("http://img.costumecraze.com/images/search_field_right_purple.png");
+      background-repeat: no-repeat;
+      width: 45px;
+      height: 34px;
+      display: table-cell; }
+      .basic-search .search-keywords .search-button-go input {
+        width: 45px;
+        height: 31px;
+        background: transparent none repeat scroll 0 center;
+        border: 0 none;
+        color: #fff;
+        cursor: pointer;
+        font-weight: bold; }
+
+/*
+** Begin styles for category-search dropdown
+**/
+.category-search {
+  display: table;
+  width: 100%;
+  padding-top: 1px;
+  /*
+  ** These .basic-search styles are unique to
+  ** the category dropdown search dialog.
+  */ }
+  .category-search a {
+    font-size: 120%;
+    font-weight: 560; }
+  .category-search .basic-search {
+    display: table-cell; }
+  .category-search .search-dialog-controls {
+    display: table-cell;
+    vertical-align: top; }
+  .category-search .advanced-search {
+    display: table-cell; }
+    .category-search .advanced-search .advanced-search-container {
+      display: table;
+      width: 100%; }
+      .category-search .advanced-search .advanced-search-container .row {
+        display: table-row;
+        font-size: 120%; }
+        .category-search .advanced-search .advanced-search-container .row .form-label {
+          display: table-cell;
+          text-align: right;
+          padding: .1em .2em;
+          font-weight: bold;
+          cursor: pointer;
+          white-space: nowrap; }
+        .category-search .advanced-search .advanced-search-container .row .form-field {
+          display: table-cell;
+          text-align: left;
+          padding: .1em .2em;
+          cursor: pointer;
+          color: #777; }
+
+/*
+ * Begin non-semantic helper classes
+ */
+.nowrap {
+  white-space: nowrap; }
+
+.bu {
+  font-weight: bold;
+  text-decoration: underline; }
+
+.inline-center {
+  display: inline-block;
+  text-align: center; }
+
+.hide {
+  display: none !important; }
+
+/*
+ * These classes are being used in the mockup to show and hide
+ * elements, e.g. the text "Halloween" that we'd push throughout
+ * the site during Halloween-season. I don't intend for this
+ * css or any of the content that contains these classes to
+ * exist beyond this mockup period.
+ *
+ * 'unset' to show content
+ * 'none' to hide
+ */
+/* typically to show or hide the text "Halloween" in several locations */
+.halloween {
+  display: none; }
+
+/* to modify content on category pages for when the category IS NOT
+   filtered with a search. */
+.category-is-not-filtered {
+  display: unset; }
+
+/* to modify content on category pages for when the category IS
+   filtered with a search. */
+.category-is-filtered {
+  display: none; }
+
+/* to use a NON-transparent JPEG as the image above the top-nav
+   text links. */
+.nav-image-jpg {
+  display: unset; }
+
+/* to use a TRANSPARENT PNG as the image above the top-nav
+   text links. */
+.nav-image-png {
+  display: none; }
+
+/*
+** new/test area
+*/
+.ship-fast {
+  text-align: center;
+  font-size: 100%; }
+  .ship-fast a {
+    color: #8d44c7;
+    font-weight: bold; }
+    .ship-fast a .loud {
+      color: red; }
+    .ship-fast a .digital-clock {
+      display: inline-block;
+      background-color: #777;
+      padding: 2px 1px 2px 2px;
+      border-radius: 4px; }
+    .ship-fast a .clock-digit {
+      display: inline-block;
+      font-family: 'Consolas', 'DejaVu Sans Mono', 'Oxygen Mono', 'Lucida Console', 'Monaco';
+      background-color: #000;
+      color: #fff;
+      margin: 0 1px 0 0;
+      padding: 4px 4px 3px;
+      border-radius: 3px; }
+
+.search-bar {
+  display: table;
+  width: 100%;
+  margin: 1em 0; }
+  .search-bar .search-form,
+  .search-bar .secure-block,
+  .search-bar .social-block {
+    display: table-cell; }
+    .search-bar .search-form > *,
+    .search-bar .secure-block > *,
+    .search-bar .social-block > * {
+      display: inline-block;
+      vertical-align: middle; }
+  .search-bar .search-form {
+    text-align: left;
+    margin: 0;
+    white-space: nowrap; }
+    .search-bar .search-form input[type="text"] {
+      height: 34px;
+      font-size: 90%;
+      padding: 0 .5em;
+      margin: 0;
+      vertical-align: middle;
+      width: 45ex;
+      box-sizing: border-box; }
+    .search-bar .search-form input[type="image"] {
+      height: 34px;
+      width: 67px;
+      margin: 0;
+      vertical-align: middle; }
+  .search-bar .secure-block {
+    text-align: center; }
+    .search-bar .secure-block > .mcafee {
+      margin: 0 1em; }
+      .search-bar .secure-block > .mcafee > img {
+        display: block;
+        margin-bottom: -7px; }
+  .search-bar .social-block {
+    text-align: right; }
+    .search-bar .social-block > .addthis-new {
+      margin: 0 1em 0 0; }
+      .search-bar .social-block > .addthis-new > img {
+        display: block; }
+    .search-bar .social-block > .facebook {
+      margin: 0;
+      border: 0;
+      overflow: hidden;
+      height: 21px;
+      width: 90px; }
+
+.topside-logo-bar {
+  display: table;
+  width: 100%;
+  margin-top: 1em; }
+  .topside-logo-bar .topside-logo-block,
+  .topside-logo-bar .blowout-banner-block,
+  .topside-logo-bar .topside-links-block {
+    display: table-cell;
+    vertical-align: bottom; }
+  .topside-logo-bar .topside-logo-block {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 188px; }
+  .topside-logo-bar .blowout-banner-block {
+    text-align: center;
+    width: 100%;
+    padding: 0 1em 1em; }
+    .topside-logo-bar .blowout-banner-block > a {
+      display: block; }
+      .topside-logo-bar .blowout-banner-block > a * {
+        display: inline-block;
+        vertical-align: middle; }
+  .topside-logo-bar .topside-links-block {
+    white-space: nowrap;
+    text-align: center; }
+    .topside-logo-bar .topside-links-block .divider {
+      display: inline-block;
+      vertical-align: middle;
+      color: blue; }
+    .topside-logo-bar .topside-links-block .links-line .home {
+      display: inline-block;
+      vertical-align: middle; }
+    .topside-logo-bar .topside-links-block .links-line .cart {
+      display: inline-block;
+      vertical-align: middle; }
+      .topside-logo-bar .topside-links-block .links-line .cart a {
+        display: inline-block; }
+        .topside-logo-bar .topside-links-block .links-line .cart a .icon {
+          display: inline-block;
+          position: relative;
+          vertical-align: middle; }
+          .topside-logo-bar .topside-links-block .links-line .cart a .icon img {
+            display: block; }
+          .topside-logo-bar .topside-links-block .links-line .cart a .icon .cart-item-count {
+            position: absolute;
+            top: 0;
+            left: 4px;
+            width: 26px;
+            text-align: center;
+            font-weight: bold; }
+        .topside-logo-bar .topside-links-block .links-line .cart a .text {
+          vertical-align: middle; }
+    .topside-logo-bar .topside-links-block .links-line .mycc {
+      display: inline-block;
+      vertical-align: middle; }
+    .topside-logo-bar .topside-links-block .csr {
+      margin-top: .5em; }
+
+/* normalizer style */
+img {
+  border: 0; }
+
+/*# sourceMappingURL=mockup-styles.css.map */
