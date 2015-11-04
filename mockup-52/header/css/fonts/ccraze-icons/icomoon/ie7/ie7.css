@@ -1,0 +1,78 @@
+.icon-account {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x61;');
+}
+.icon-cart-outline {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x62;');
+}
+.icon-cart {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x63;');
+}
+.icon-magnify {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x65;');
+}
+.icon-phone {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x66;');
+}
+.icon-email-outline {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x67;');
+}
+.icon-email {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x68;');
+}
+.icon-contact {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x69;');
+}
+.icon-cart-open {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x64;');
+}
+.icon-uni30 {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x30;');
+}
+.icon-uni31 {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x31;');
+}
+.icon-uni32 {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x32;');
+}
+.icon-uni33 {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x33;');
+}
+.icon-uni34 {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x34;');
+}
+.icon-uni35 {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x35;');
+}
+.icon-uni36 {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x36;');
+}
+.icon-uni37 {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x37;');
+}
+.icon-uni38 {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x38;');
+}
+.icon-uni39 {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x39;');
+}
+.icon-uni3A {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x3a;');
+}
+.icon-uni3B {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x3b;');
+}
+.icon-document-fill {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6a;');
+}
+.icon-minus-alt {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6b;');
+}
+.icon-bolt {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6c;');
+}
+.icon-error {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6d;');
+}
+.icon-warning {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x6e;');
+}

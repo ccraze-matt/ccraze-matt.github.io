@@ -1,0 +1,112 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?-llw2kc');
+	src:url('fonts/icomoon.eot?#iefix-llw2kc') format('embedded-opentype'),
+		url('fonts/icomoon.ttf?-llw2kc') format('truetype'),
+		url('fonts/icomoon.woff?-llw2kc') format('woff'),
+		url('fonts/icomoon.svg?-llw2kc#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+i, .icomoon-liga {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	
+	/* Enable Ligatures ================ */
+	letter-spacing: 0;
+	-webkit-font-feature-settings: "liga";
+	-moz-font-feature-settings: "liga=1";
+	-moz-font-feature-settings: "liga";
+	-ms-font-feature-settings: "liga" 1;
+	-o-font-feature-settings: "liga";
+	font-feature-settings: "liga";
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-account:before {
+	content: "\61";
+}
+.icon-cart-outline:before {
+	content: "\62";
+}
+.icon-cart:before {
+	content: "\63";
+}
+.icon-magnify:before {
+	content: "\65";
+}
+.icon-phone:before {
+	content: "\66";
+}
+.icon-email-outline:before {
+	content: "\67";
+}
+.icon-email:before {
+	content: "\68";
+}
+.icon-contact:before {
+	content: "\69";
+}
+.icon-cart-open:before {
+	content: "\64";
+}
+.icon-uni30:before {
+	content: "\30";
+}
+.icon-uni31:before {
+	content: "\31";
+}
+.icon-uni32:before {
+	content: "\32";
+}
+.icon-uni33:before {
+	content: "\33";
+}
+.icon-uni34:before {
+	content: "\34";
+}
+.icon-uni35:before {
+	content: "\35";
+}
+.icon-uni36:before {
+	content: "\36";
+}
+.icon-uni37:before {
+	content: "\37";
+}
+.icon-uni38:before {
+	content: "\38";
+}
+.icon-uni39:before {
+	content: "\39";
+}
+.icon-uni3A:before {
+	content: "\3a";
+}
+.icon-uni3B:before {
+	content: "\3b";
+}
+.icon-document-fill:before {
+	content: "\6a";
+}
+.icon-minus-alt:before {
+	content: "\6b";
+}
+.icon-bolt:before {
+	content: "\6c";
+}
+.icon-error:before {
+	content: "\6d";
+}
+.icon-warning:before {
+	content: "\6e";
+}

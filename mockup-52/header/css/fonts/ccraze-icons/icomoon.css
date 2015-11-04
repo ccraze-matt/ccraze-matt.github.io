@@ -1,0 +1,112 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('ccraze-icons/icomoon/icomoon.eot?-llw2kc');
+	src:url('ccraze-icons/icomoon/icomoon.eot?#iefix-llw2kc') format('embedded-opentype'),
+		url('ccraze-icons/icomoon/icomoon.ttf?-llw2kc') format('truetype'),
+		url('ccraze-icons/icomoon/icomoon.woff?-llw2kc') format('woff'),
+		url('ccraze-icons/icomoon/icomoon.svg?-llw2kc#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+i, .ccicon {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Enable Ligatures ================ */
+	letter-spacing: 0;
+	-webkit-font-feature-settings: "liga";
+	-moz-font-feature-settings: "liga=1";
+	-moz-font-feature-settings: "liga";
+	-ms-font-feature-settings: "liga" 1;
+	-o-font-feature-settings: "liga";
+	font-feature-settings: "liga";
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.ccicon-account:before {
+	content: "\61";
+}
+.ccicon-cart-outline:before {
+	content: "\62";
+}
+.ccicon-cart:before {
+	content: "\63";
+}
+.ccicon-magnify:before {
+	content: "\65";
+}
+.ccicon-phone:before {
+	content: "\66";
+}
+.ccicon-email-outline:before {
+	content: "\67";
+}
+.ccicon-email:before {
+	content: "\68";
+}
+.ccicon-contact:before {
+	content: "\69";
+}
+.ccicon-cart-open:before {
+	content: "\64";
+}
+.ccicon-uni30:before {
+	content: "\30";
+}
+.ccicon-uni31:before {
+	content: "\31";
+}
+.ccicon-uni32:before {
+	content: "\32";
+}
+.ccicon-uni33:before {
+	content: "\33";
+}
+.ccicon-uni34:before {
+	content: "\34";
+}
+.ccicon-uni35:before {
+	content: "\35";
+}
+.ccicon-uni36:before {
+	content: "\36";
+}
+.ccicon-uni37:before {
+	content: "\37";
+}
+.ccicon-uni38:before {
+	content: "\38";
+}
+.ccicon-uni39:before {
+	content: "\39";
+}
+.ccicon-uni3A:before {
+	content: "\3a";
+}
+.ccicon-uni3B:before {
+	content: "\3b";
+}
+.ccicon-document-fill:before {
+	content: "\6a";
+}
+.ccicon-minus-alt:before {
+	content: "\6b";
+}
+.ccicon-bolt:before {
+	content: "\6c";
+}
+.ccicon-error:before {
+	content: "\6d";
+}
+.ccicon-warning:before {
+	content: "\6e";
+}

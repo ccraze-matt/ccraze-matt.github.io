@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Header v2</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Average+Sans|Average|Open+Sans+Condensed:300|Open+Sans:400,700"><!--[if IE]><![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="css/modern.css"><!--<![endif]-->
+    <!--[if lte IE 8]>
+    <script src="js/lib/ext/html5shiv-printshiv-3.7.3-pre.min.js"></script>
+    <link rel="stylesheet" href="css/old-ie.css">
+    <script src="js/lib/ext/IE9.js"></script>
+    <script src="js/lib/ext/getComputedStyle.js"></script>
+    <script src="js/lib/ext/jquery-1.11.3.js"></script><![endif]-->
+  </head>
+  <body>
+    <header>
+      <div class="top-line">
+        <div data-target=".promos-v2 .tsugi" class="promo ship-fast toggle"><span class="hajimete nowrap">We ship fast!</span> <a href="/zip_check.php" title="Calculate shipping cost and transit time" class="tsugi"><span class="nowrap-2">Order in the next</span> <span class="time nowrap-2"><span class="hours nowrap"><span class="digital-clock"><span class="clock-digit">0</span><span class="clock-digit">5</span></span> hours</span> <span class="minutes nowrap"> <span class="digital-clock"> <span class="clock-digit">3</span><span class="clock-digit">4</span></span> minutes.</span></span><span class="hidden">with <em>Priority Overnight</em> shipping.</span></a> <span class="hajimete nowrap hidden">Get it tomorrow.</span><span class="hajimete nowrap">Get it on Monday.</span>
+        </div>
+        <div class="promo sale"><a href="/SALE" class="inline-table">
+            <div class="table-cell middle"><span class="discount">30%</span></div>
+            <div class="table-cell top left">or more<br>storewide!*</div></a></div>
+        <div class="promo clearance"><a href="/clearance" class="inline-table">
+            <div class="table-cell top right">clearance<br>up to</div>
+            <div class="table-cell middle nowrap"><span class="discount">80%</span>&nbsp;off!*</div></a></div>
+      </div>
+      <div class="logo-line"><a href="/" Title="Costume Craze" class="logo"><img src="img/Costume_Craze_Logo_188x63.png" alt="Costume Craze"></a>
+        <nav role="navigation" class="icon-strip"><a href="#" title="Contact Customer Service" class="contact"><i class="ccicon-contact"></i><span class="label">Contact <span class="secondary-text">Customer Service</span></span></a><a href="#" title="Sign Up or Log in to Your Account" class="mycc"><i class="ccicon-account"></i><span class="label">My Account</span></a><a href="/cart.html" title="Checkout or View your Shopping Cart" class="cart"><span class="cart-count"><i class="ccicon-cart-open-long"></i><span class="cart-item-count">23</span></span><span class="label">View Cart</span></a><a href="#search" title="Search" class="search"><i class="ccicon-magnify"></i><span class="label">Search</span></a><a href="#menu" title="Hide/Reveal Menu and Categories" data-target=".nav-container nav" class="menu toggle">
+            <div class="hamburger">
+              <div class="bar top"></div>
+              <div class="bar middle"></div>
+              <div class="bar bottom"></div>
+            </div></a>
+        </nav>
+      </div>
+      <div class="menu-line">
+        <div class="nav-container">
+          <nav role="navigation" class="meta"><a href="#" title="Contact Customer Service" class="contact"><i class="ccicon-contact"></i>
+              <label>Contact <span class="secondary-text">Customer Service</span> <span class="short-text">Us</span></label></a><a href="#" title="Sign Up or Log in to Your Account" class="mycc"><i class="ccicon-account"></i>
+              <label>My Account</label></a><a href="/cart.html" title="Checkout or View your Shopping Cart" class="cart"><span class="cart-count"><i class="ccicon-cart-open-long"></i><span class="cart-item-count">23</span></span>
+              <label>View Cart or Checkout</label></a><a href="#search" title="Search" class="search"><i class="ccicon-magnify"></i>
+              <label>Search</label></a></nav>
+          <nav role="navigation" class="cats"><a href="/category/womens-costumes">Womens <span class="secondary-text">Costumes</span></a><a href="/category/mens-costumes">Mens <span class="secondary-text">Costumes</span></a><a href="/category/girls-costumes">Girls <span class="secondary-text">Costumes</span></a><a href="/category/boys-costumes">Boys <span class="secondary-text">Costumes</span></a><a href="/category/baby-and-toddler-costumes">Baby &amp; Toddler <span class="secondary-text">Costumes</span></a><a href="/category/plus-size-costumes">Plus Size <span class="secondary-text">Costumes</span></a><a href="/category/teen-costumes">Teen <span class="secondary-text">Costumes</span></a><a href="/category/dog-costumes">Dog <span class="secondary-text">Costumes</span></a><a href="/category/holiday-costumes">Holiday <span class="secondary-text">Costumes</span></a><a href="/category/accessories">Accessories</a><a href="/category/costume-index">Halloween <span class="secondary-text">Costumes</span></a></nav>
+          <nav role="navigation" class="more-cats"><a href="#">Clearance <span class="secondary-text">Costumes</span></a><a href="#">Superhero <span class="secondary-text">Costumes</span></a><a href="#">Animal <span class="secondary-text">Costumes</span></a><a href="#">Movie <span class="secondary-text">Costumes</span></a></nav>
+        </div>
+      </div>
+    </header>
+    <p>my page goes here.</p>
+    <div class="yo">
+      <button id="byo">click</button><a id="ayo" href="#">click</a>
+    </div><!--[if lte IE 9]><!-->
+    <script src="js/lib/ext/console-polyfill.js"></script><![endif]--><!--[if !lte IE 8]><!-->
+    <script src="js/lib/ext/jquery-1.11.3.js"></script><![endif]-->
+    <script src="js/lib/$m.js"></script>
+    <script src="js/lib/sticky.js"></script>
+    <script src="js/lib/jquery.blockWrapMe.js"></script>
+    <script src="js/lib/jquery.toggler.js"></script><!--[if !lt IE 7]><!-->
+    <script src="js/lib/ext/picturefill-3.0.0-rc1.js"></script><![endif]-->
+    <script src="js/lib/ext/rAF.js"></script>
+    <script>
+      //
+      // on `domcontentready` scripts go here.
+      //
+      $(function () {
+        //- alert('calling toggler init')
+        $('.toggle').toggler({
+          //- debug: true
+        });
+      });
+      
+      
+      
+    </script>
+    <script>
+      //
+      // DEGUB:
+      //   onload, and whenever the window resizes, show the new
+      //   dimensions in the console or in the viewport.
+      //
+      jQuery(function () {
+        $(document.body).prepend($('<div>').addClass('debug window-width'));
+      
+        //-   function show () {
+        //-     console.log('width:', window.innerWidth, 'height:', window.innerHeight);
+        //-   }
+      
+        function show () {
+          $('.window-width').text(window.innerWidth + ', ' + document.body.clientWidth + ', ' + screen.width);
+        }
+      
+        show();
+        $(window).on('resize', show);
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "ccraze-icons";
+  src:url("ccraze-icons/fontastic/ccraze-icons.eot");
+  src:url("ccraze-icons/fontastic/ccraze-icons.eot?#iefix") format("embedded-opentype"),
+    url("ccraze-icons/fontastic/ccraze-icons.woff") format("woff"),
+    url("ccraze-icons/fontastic/ccraze-icons.ttf") format("truetype"),
+    url("ccraze-icons/fontastic/ccraze-icons.svg#ccraze-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "ccraze-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+i,
+.ccicon,
+[class^="ccicon-"]:before,
+[class*=" ccicon-"]:before {
+  font-family: "ccraze-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ccicon-cart:before {
+  content: "a";
+}
+.ccicon-cart-outline:before {
+  content: "b";
+}
+.ccicon-magnify:before {
+  content: "d";
+}
+.ccicon-account:before {
+  content: "e";
+}
+.ccicon-shield:before {
+  content: "f";
+}
+.ccicon-chat-bubble-two:before {
+  content: "g";
+}
+.ccicon-email:before {
+  content: "h";
+}
+.ccicon-email-outline:before {
+  content: "i";
+}
+.ccicon-phone:before {
+  content: "j";
+}
+.ccicon-chevron-down-circle:before {
+  content: "l";
+}
+.ccicon-chevron-up-circle:before {
+  content: "m";
+}
+.ccicon-cart-open:before {
+  content: "c";
+}
+.ccicon-contact:before {
+  content: "k";
+}
+.ccicon-digital-zero:before {
+  content: "0";
+}
+.ccicon-digital-one:before {
+  content: "1";
+}
+.ccicon-digital-two:before {
+  content: "2";
+}
+.ccicon-digital-three:before {
+  content: "3";
+}
+.ccicon-digital-four:before {
+  content: "4";
+}
+.ccicon-digital-five:before {
+  content: "5";
+}
+.ccicon-digital-six:before {
+  content: "6";
+}
+.ccicon-digital-seven:before {
+  content: "7";
+}
+.ccicon-digital-eight:before {
+  content: "8";
+}
+.ccicon-digital-nine:before {
+  content: "9";
+}
+.ccicon-digital-colon:before {
+  content: ":";
+}
+.ccicon-circle:before {
+  content: "n";
+}

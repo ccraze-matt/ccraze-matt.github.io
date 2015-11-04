@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Header Experiment</title>
+    <link rel="stylesheet" href="css/app.css">
+    <style>
+      iframe {
+        overflow: auto;
+        display: inline-block;
+        vertical-align: top;
+        border: 0;
+      }
+
+      .view-container {
+        display: inline-block;
+        vertical-align: top;
+        outline: 1px #ddd solid;
+        width: 320px;
+        margin: 5px;
+        position: relative;
+      }
+
+      header {
+        border-bottom: 1px #ddd solid;
+        text-align: center;
+        padding: .3em;
+        background: #eee;
+      }
+
+      .dim .x,
+      .dim .y,
+      .dim .scale {
+        font-weight: bold;
+      }
+
+      .dim .by {
+        color: #999;
+        font-weight: normal;
+      }
+
+      .dim .by:before,
+      .dim .by:after {
+        content: ' ';
+        display: none;
+        font-weight: normal;
+      }
+
+      .dim .scale:before {
+        content: ' @';
+        color: #999;
+        font-weight: normal;
+      }
+
+      .dim .scale:after {
+        content: ' scale';
+        color: #999;
+        font-weight: normal;
+      }
+
+      .dim .px {
+        display: none;
+        color: #999;
+        font-weight: normal;
+      }
+
+      li {
+        list-style: disc outside none;
+        margin-left: 1em;
+      }
+
+    </style>
+  </head>
+  <body>
+    <template id="tmpl1">
+      <div class="view-container">
+        <header>
+          <div class="dim"><span class="x"></span><span class="px">px</span><span class="by">x</span><span class="y"></span><span class="px">px</span><span class="scale"></span>
+          </div>
+          <div class="name"></div>
+        </header>
+        <iframe class="viewer"></iframe>
+      </div>
+    </template>
+    <div class="viewers"></div>
+    <hr>
+    <div class="more">TODO:
+      <ul class="todo">
+        <li>Specify portrait and landscape in configuration and interest levels.</li>
+        <li>Tex tbox entry for url</li>
+        <li>Textboxes for min and max scaling</li>
+        <li>Remember settings via cookie or storage</li>
+      </ul>
+      <div class="notes">
+        <p>Settings/textboxes should disappear into a hamburger after being set.</p>
+      </div>
+    </div>
+    <!---->
+    <!-- requisite jquery-->
+    <!-- to continue supporting IE 8, we need to stay on jquery's 1.x branch-->
+    <!---->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+    <script>
+      var iframes = [
+        { dim: [160, 240],
+          desc: 'Small screen with enlarged text',
+          type: 'phone',
+          interest: 1 },
+        { dim: [320, 480],
+          desc: 'iPhone 3/4, many Lumias',
+          type: 'phone',
+          interest: 1 },
+        { dim: [360, 640],
+          desc: 'Nexus 5, OnePlus One',
+          type: 'phone',
+          interest: 1 },
+        { dim: [414, 736],
+          desc: 'iPhone 6 Plus',
+          type: 'phablet',
+          interest: 1 },
+        { dim: [504, 504],
+          desc: 'Blackberry Passport',
+          type: 'phablet',
+          interest: 2 },
+        { dim: [412, 690],
+          desc: 'Nexus 6',
+          type: 'phablet',
+          interest: 2 },
+        { dim: [768, 1024],
+          desc: 'iPad mini 1/2/3, iPad 1/2/3/4/Air',
+          type: 'tablet',
+          interest: 1 },
+        { dim: [800, 1280],
+          desc: 'Galaxy Tabs',
+          type: 'tablet',
+          interest: 2 },
+        { dim: [427, 240],
+          desc: 'Google Glass',
+          type: 'other',
+          interest: 2 },
+        { dim: [1920, 1080],
+          desc: '17" VAIO',
+          type: 'desktop',
+          interest: 2 },
+        { dim: [960, 1080],
+          desc: '17" VAIO half-screen',
+          type: 'desktop',
+          interest: 2 },
+        { dim: [1366, 768],
+          desc: '15" laptop',
+          type: 'desktop',
+          interest: 2 },
+      ];
+
+      $(function () {
+        //
+        // create specified iframes, zooming larger ones so that the
+        // max iframe width is 320px.
+        //
+        var tmpl = $('#tmpl1')[0].content,
+            $viewers = $('.viewers'),
+            $newContainer, viewer, height;
+
+        iframes.forEach(function (iframe, index) {
+          if (iframe.interest <= 1) {
+            var scale = 320 / iframe.dim[0];
+
+            $(tmpl)
+              .find('.x').text(iframe.dim[0])
+                .end()
+              .find('.y').text(iframe.dim[1])
+                .end()
+              .find('.scale').text(scale.toFixed(2))
+                .end()
+              .find('.name').text(iframe.desc)
+                .end()
+              .find('.viewer')
+                .attr('src', '/')
+                .css({
+                  width: iframe.dim[0] + 'px',
+                  height: iframe.dim[1] + 'px',
+                  transformOrigin: '0 0',
+                  transform: `scale(${scale})`
+                });
+
+            $viewers.append(document.importNode(tmpl, true));
+
+            $newContainer = $viewers.children().last();
+            viewer = $newContainer.find('.viewer')[0];
+            height = viewer.offsetTop + (viewer.offsetHeight * scale) + 'px';
+
+            $newContainer.css({
+              width: '320px',
+              height: height
+            });
+
+          }
+        });
+
+        //
+        // If there's a url in the url fragment, go there.
+        //
+        function examineHash () {
+          var qs, i, pair, ret = {};
+
+          qs = window.location.hash.substring(1);
+          qs = qs.split('&').map(function (s) { return s.trim(); });
+
+          for (i = 0; i < qs.length; i++) {
+            pair = qs[i].split('=');
+            ret[decodeURI(pair[0])] = decodeURI(pair[1]);
+          }
+
+          if (ret.url) {
+            $('iframe').attr('src', ret.url);
+          }
+        }
+
+        //
+        // Examine the url now, as the dom is ready,
+        // and examine it again whenever the hash changes.
+        //
+        examineHash();
+        $(window).on('hashchange', examineHash);
+      });
+    </script>
+  </body>
+</html>
